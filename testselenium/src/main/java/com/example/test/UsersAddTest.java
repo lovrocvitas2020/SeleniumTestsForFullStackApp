@@ -11,13 +11,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ *  This test is used to add new user
+ * 
+ */
 public class UsersAddTest {
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+      
 
-
-        System.out.println("Test Start");
+        System.out.println("UsersAddTest Start");
 
         // Set the path to the chromedriver executable
         String driverPath = System.getProperty("user.dir") + "/chromedriver.exe";
@@ -32,7 +35,7 @@ public class UsersAddTest {
 
         try {
 
-            // Step 1: Visit www.falconeri.com
+            // Step 1: 
             driver.get("http://localhost:3000");
             System.out.println("Step 1: localhost:3000");
 
@@ -54,8 +57,6 @@ public class UsersAddTest {
             }
 
 
-           
-            // Click button add  /html/body/div/div/div[2]/div/div[1]/a[1]
             WebElement buttonAdd = driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div[1]/a[1]"));
             buttonAdd.click();
             System.out.println("Step 3: Click on  add user");
@@ -70,10 +71,7 @@ public class UsersAddTest {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmm");
             String formattedDate = now.format(formatter).concat("admin");
             System.out.println("Generated Date Number: " + formattedDate);
-
-    
-
-          
+       
             WebElement fieldName = driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div/form/div[1]/input"));
             fieldName.sendKeys(formattedDate);
            
@@ -86,8 +84,7 @@ public class UsersAddTest {
 
             WebElement fieldPassword = driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div/form/div[4]/input"));
             fieldPassword.sendKeys(formattedDate);
-
-           
+          
 
             try {
                 Thread.sleep(5000);
@@ -100,8 +97,6 @@ public class UsersAddTest {
 
             System.out.println("Step 4: Fill fields and click confirm");
          
-
-          
 
 
 
