@@ -43,11 +43,11 @@ public class UsersAddTest {
             driver.manage().window().maximize();
 
             WebElement username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("username")));
-            username.sendKeys("admin700");
+            username.sendKeys("admin17006");
             username.submit();
 
             WebElement password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password")));
-            password.sendKeys("admin700");
+            password.sendKeys("admin17006");
             password.submit();      
             
             try {
@@ -57,7 +57,7 @@ public class UsersAddTest {
             }
 
 
-            WebElement buttonAdd = driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div[1]/a[1]"));
+            WebElement buttonAdd = driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div/div[1]/div/a[1]"));
             buttonAdd.click();
             System.out.println("Step 3: Click on  add user");
             
