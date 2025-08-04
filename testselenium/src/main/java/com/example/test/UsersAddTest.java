@@ -56,8 +56,18 @@ public class UsersAddTest {
                 e.printStackTrace();
             }
 
+             WebElement buttonMembersManagement = driver.findElement(By.xpath("/html/body/div/div/div[2]/div[2]/div/div[1]/div/a[1]"));
+            buttonMembersManagement.click();
+            System.out.println("Step 3: Click on  add user");
+            
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
-            WebElement buttonAdd = driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div/div[1]/div/a[1]"));
+
+            WebElement buttonAdd = driver.findElement(By.xpath("/html/body/div/div/div[2]/nav/ul/li[2]/a"));
             buttonAdd.click();
             System.out.println("Step 3: Click on  add user");
             
